@@ -1,11 +1,28 @@
 body {
-  color: #00FF00;
   font-family: 'Ubuntu', sans-serif;
-  background-color: black;
+  color: white;
+  background-color: rgba(41, 128, 185,1.0);
 }
 
-#main {
-  font-size: 30px;
+header {
+  text-align: center;
+  font-size: 50px;
+  margin: 20px;
+}
+
+.cli-file {
+  padding-right: 25px;
+}
+
+#command-line {
+  margin: 0 auto;
+  padding: 20px;
+  width: 80%;
+  height: 300px;
+  font-size: 20px;
+  color: #00FF00;
+  background-color: rgba(0,0,0, .92); 
+  box-shadow: 10px 10px 5px rgba(0,0,0, .52);
 }
 
 .container {
@@ -14,23 +31,23 @@ body {
 }
 
 .typed-cursor{
-    opacity: 1;
-    -webkit-animation: blink 0.7s infinite;
-    -moz-animation: blink 0.7s infinite;
-    animation: blink 0.7s infinite;
+  opacity: 1;
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite;
 }
 @keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
 }
 @-webkit-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
 }
 @-moz-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
 }
