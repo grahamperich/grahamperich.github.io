@@ -3,19 +3,51 @@
 <head>
   <!--Import Google Ubuntu Font-->
   <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <!--Import Google Icon Font-->
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="./bower_components/materialize/dist/css/materialize.min.css"  media="screen,projection"/>
   <link rel="stylesheet" type="text/css" href="./style.css">
   <title>Graham Perich</title>
 </head>
 <body>
   <div class="container">
-    <header>Graham Perich</header>
-    <div id="command-line">
-      <!-- use spans because block elements mess with typed.js formatting -->
-      <span id="line-one" class="cli-text"></span>
-    </div>
+    <header>
+    <h3>Graham Perich<h3>
+    <i class="fa fa-github" aria-hidden="true"></i>
+    </header>
+    <div class="container">
+
+      <div id="command-line">
+        <!-- use spans because block elements mess with typed.js formatting -->
+        <span id="line-one" class="cli-text"></span>
+      </div>
+
+      <div id="buttons" class="container">
+        <div class="row">
+          <div class="col s4">
+            <a id="projects" class="waves-effect waves-light btn scale-transition scale-out">
+              Projects
+            </a>
+          </div>
+          <div class="col s4">
+            <a id="about" class="waves-effect waves-light btn scale-transition scale-out">
+              About Graham
+            </a>
+          </div>
+          <div class="col s4">
+            <a id="contact" class="waves-effect waves-light btn scale-transition scale-out">
+              Contact
+            </a>
+          </div>
+        </div> <!-- .row -->
+      </div> <!-- .container -->
+
+    </div> <!-- .container -->
   </div>
 
   <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="./bower_components/materialize/dist/js/materialize.min.js"></script>
   <!-- load my custom version of Typed.js -->
   <script src="./bower_components/typed.js/js/typed.js"></script>
   <script src="./main.js"></script>

@@ -1,15 +1,20 @@
-// .typed method is async because of timeouts and effects; functions passed as callbacks to guarantee order
+//setup click handlers, initiate app on load...
+$(function() {
+  // $('#projects').click(handleProjectClick)
+  // $('#about').click(handleAboutClick)
+  // $('#contact').click(handleContactClick)
 
-$(function(){
   $('#line-one').typed({
-    strings: ["Booting up... ^1000", "SUCCESS ^1000"],
+    // strings: ["Booting up... ^1000", "SUCCESS ^1000"],
+    strings: ["a"],
     typeSpeed: 5,
     showCursor: false,
     callback: setTextAndInit.bind(this, 'grahamperich@TheCloud ~')
   });
 });
 
-// initiate app after intro sequence completes
+// mock "DOM CLI" methods
+
 function setTextAndInit(str) {
   console.log('starting main app sequence');
   $('#line-one').text(str);
@@ -37,8 +42,16 @@ function ls(items) {
   $('#command-line').append('<br>');
   $('#command-line').append(`<span id="line-three"></span>`);
 
+  $('.btn').toggleClass('scale-out');
+
   items.forEach(item => {
     $('#line-three').append(`<span class="cli-file">${item}</span>`);
   })
+
+}
+
+// click handlers
+
+function handleProjectClick(){
 
 }
