@@ -15,7 +15,7 @@
 </head>
 <body>
    <nav>
-    <div class="nav-wrapper">
+    <div class="nav-wrapper light-blue darken-3">
       <a href="#" class="brand-logo center">GRAHAM PERICH</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li>
@@ -32,37 +32,72 @@
     </div>
   </nav>
   <div class="container">
-    <div id="header">
-
-    </div>
     <div class="container">
 
-      <div id="command-line">
-        <!-- use spans because block elements mess with typed.js formatting -->
-        <span id="line-one" class="cli-text"></span>
+      <div id="main">
+        <img id="photo" src="assets/graham.jpg">
+
+        <div id="cards">
+          <!-- projects card -->
+          <div class="card light-blue lighten-2 medium">
+            <!-- card tabs -->
+            <div class="card-tabs">
+              <ul class="tabs tabs-fixed-width light-blue lighten-2">
+                <li class="tab"><a href="#colorz" class="active grey-text text-lighten-4">Colorz.io</a></li>
+                <li class="tab"><a href="#nimbus" class="grey-text text-lighten-4">Nimbus</a></li>
+                <li class="tab"><a href="#sdsuevents" class="grey-text text-lighten-4">SDSUEvents</a></li>
+              </ul>
+            </div>
+
+            <!-- card image -->
+            <div class="card-image">
+              <img class="activator" src="assets/colorz.png">
+            </div>
+
+            <!-- card bottom -->
+            <div class="card-content light-blue lighten-2">
+              <div id="colorz">
+                <span class="card-title activator grey-text text-lighten-4">Colorz.io<i class="material-icons right">more_vert</i></span>
+              </div>
+              <div id="nimbus">
+                <span class="card-title activator grey-text text-lighten-4">Nimbus<i class="material-icons right">more_vert</i></span>
+              </div>
+              <div id="sdsuevents">
+                <span class="card-title activator grey-text text-lighten-4">SDSUEvents<i class="material-icons right">more_vert</i></span>
+              </div>
+
+            </div>
+
+            <!-- card reveal -->
+            <div class="card-reveal light-blue lighten-2">
+              <span class="card-title grey-text text-lighten-4">Colorz.io<i class="material-icons right">close</i></span>
+              <p>Colorz.io is an intuitive color picking application built with React, Node, and MongoDB. Users can browse color palletes and easily copy hex code values to the clipboard. Users can also create their own color palletes and get suggestions about which colors go well together.</p>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div id="buttons" class="container">
+      <div id="buttons">
 
         <div class="row">
           <div class="col s4">
-            <a id="projects" class="waves-effect waves-light btn scale-transition scale-out">
-              Projects
+            <a id="projects" class="light-green accent-3 waves-effect waves-light btn scale-transition scale-out">
+              <span class="grey-text text-darken-4">Projects<span>
             </a>
           </div>
           <div class="col s4">
-            <a id="about" class="waves-effect waves-light btn scale-transition scale-out">
-              About Graham
+            <a id="about" class="light-green accent-3 waves-effect waves-light btn scale-transition scale-out">
+              <span class="grey-text text-darken-4">About<span>
             </a>
           </div>
           <div class="col s4">
-            <a id="contact" class="waves-effect waves-light btn scale-transition scale-out">
-              Contact
+            <a id="contact" class="light-green accent-3 waves-effect waves-light btn scale-transition scale-out">
+              <span class="grey-text text-darken-4">Contact<span>
             </a>
           </div>
         </div> <!-- .row -->
 
-        <div class="row">
+        <!-- <div class="row">
           <div class="col s4">
             <a id="projects" class="waves-effect waves-light btn scale-transition scale-out">
               Nimbus
@@ -78,24 +113,16 @@
               SDSUEvents
             </a>
           </div>
-        </div> <!-- .row -->
+        </div> --> <!-- .row -->
 
-      </div> <!-- .container -->
+      </div> <!-- #buttons -->
+
+      <div id="command-line">
+        <!-- use spans because block elements mess with typed.js formatting -->
+        <span id="line-one" class="cli-text"></span>
+      </div>
+
     </div> <!-- .container -->
-
-    <div class="card">
-      <div class="card-image waves-effect waves-block waves-light">
-        <img class="activator" src="images/office.jpg">
-      </div>
-      <div class="card-content">
-        <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-        <p><a href="#">This is a link</a></p>
-      </div>
-      <div class="card-reveal">
-        <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-        <p>Here is some more information about this product that is only revealed once clicked on.</p>
-      </div>
-    </div>
 
   </div>
 

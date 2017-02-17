@@ -66,6 +66,8 @@ function renderLine4And5(id, strings) {
     showCursor: true
   });
 
+  $('#photo').hide({duration: 800, queue: true});
+  $('#cards').show({duration: 800, queue: true});
 }
 
 // click handlers
@@ -78,7 +80,7 @@ function handleClick() {
   this.called = true
   var id = this.id
   $('#line-two').typed({
-    strings: ["^500 open ./Projects ^1500"],
+    strings: ["^500 open ~/Projects ^1500"],
     typeSpeed: 20,
     showCursor: false,
     callback: clearText.bind(this, '#line-two', renderLine4And5.bind(this, id, ['Nimbus', 'Colorz.io', 'SDSUEvents']))
