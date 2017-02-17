@@ -1,8 +1,8 @@
 //setup click handlers, initiate app on load...
 $(function() {
-  $('.btn').click(handleClick)
-  // $('#about').click(handleAboutClick)
-  // $('#contact').click(handleContactClick)
+  $('ul.tabs').tabs();
+  $('#projects').click(handleProjectsClick)
+  $('#about').click(handleAboutClick)
 
   $('#line-one').typed({
     // strings: ["Booting up... ^1000", "SUCCESS ^1000"],
@@ -23,7 +23,7 @@ function setTextAndInit(str) {
     strings: ["^1000 ls ^1500"],
     typeSpeed: 5,
     showCursor: true,
-    callback: clearText.bind(this, '#line-two', ls.bind(this, ['Projects', 'About-Graham', 'Contact']))
+    callback: clearText.bind(this, '#line-two', ls.bind(this, ['Projects.js', 'About.js', 'Contact.js']))
   });
 }
 
@@ -72,7 +72,7 @@ function renderLine4And5(id, strings) {
 
 // click handlers
 
-function handleClick() {
+function handleProjectsClick() {
   if (this.called) {
     return;
   }
@@ -80,9 +80,28 @@ function handleClick() {
   this.called = true
   var id = this.id
   $('#line-two').typed({
-    strings: ["^500 open ~/Projects ^1500"],
+    strings: ["^500 node ~/Projects.js ^1350"],
     typeSpeed: 20,
     showCursor: false,
     callback: clearText.bind(this, '#line-two', renderLine4And5.bind(this, id, ['Nimbus', 'Colorz.io', 'SDSUEvents']))
   });
+}
+
+function handleAboutClick() {
+  // if lines 4 and 5 have been rendered...
+  if ($('#line-four').toArray().length) {
+    $('#line-four').typed({
+      strings: ['node ~/About.js ^1350'],
+      typeSpeed: 5,
+      showCursor: true,
+      callback: clearText.bind(this, '#line-four')
+    });
+  } else {
+      $('#line-two').typed({
+        strings: ['node ~/About.js ^1350'],
+        typeSpeed: 5,
+        showCursor: true,
+        callback: clearText.bind(this, '#line-two')
+    });
+  }
 }

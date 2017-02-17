@@ -38,42 +38,86 @@
         <img id="photo" src="assets/graham.jpg">
 
         <div id="cards">
-          <!-- projects card -->
-          <div class="card light-blue lighten-2 medium">
-            <!-- card tabs -->
-            <div class="card-tabs">
-              <ul class="tabs tabs-fixed-width light-blue lighten-2">
-                <li class="tab"><a href="#colorz" class="active grey-text text-lighten-4">Colorz.io</a></li>
-                <li class="tab"><a href="#nimbus" class="grey-text text-lighten-4">Nimbus</a></li>
-                <li class="tab"><a href="#sdsuevents" class="grey-text text-lighten-4">SDSUEvents</a></li>
-              </ul>
-            </div>
-
-            <!-- card image -->
-            <div class="card-image">
-              <img class="activator" src="assets/colorz.png">
-            </div>
-
-            <!-- card bottom -->
-            <div class="card-content light-blue lighten-2">
-              <div id="colorz">
-                <span class="card-title activator grey-text text-lighten-4">Colorz.io<i class="material-icons right">more_vert</i></span>
-              </div>
-              <div id="nimbus">
-                <span class="card-title activator grey-text text-lighten-4">Nimbus<i class="material-icons right">more_vert</i></span>
-              </div>
-              <div id="sdsuevents">
-                <span class="card-title activator grey-text text-lighten-4">SDSUEvents<i class="material-icons right">more_vert</i></span>
-              </div>
-
-            </div>
-
-            <!-- card reveal -->
-            <div class="card-reveal light-blue lighten-2">
-              <span class="card-title grey-text text-lighten-4">Colorz.io<i class="material-icons right">close</i></span>
-              <p>Colorz.io is an intuitive color picking application built with React, Node, and MongoDB. Users can browse color palletes and easily copy hex code values to the clipboard. Users can also create their own color palletes and get suggestions about which colors go well together.</p>
-            </div>
+        <div class="row">
+          <div id="tabs" class="col s12">
+            <ul class="tabs light-blue darken-1">
+              <li class="tab col s4 grey-text text-lighten-4">
+              <a class="active grey-text text-lighten-4" href="#nimbus-card">Nimbus</a></li>
+              <li class="tab col s4">
+              <a href="#colorz-card" class="grey-text text-lighten-4">Colorz.io</a></li>
+              <li class="tab col s4 grey-text text-lighten-4">
+              <a href="#sdsuevents-card" class="grey-text text-lighten-4">SDSUEvents</a></li>
+              <div class="indicator" style="right: 429.156px; left: 0px;"></div>
+            </ul>
           </div>
+
+          <div id="nimbus-card" class="col s12">
+            <!-- nimbus card -->
+            <div class="card light-blue lighten-2 medium">
+              <!-- card image -->
+              <div class="card-image">
+                <img class="activator" src="assets/nimbus.jpg">
+              </div>
+              <!-- card bottom -->
+              <div class="card-content light-blue lighten-2">
+                <div id="colorz">
+                  <span class="card-title activator grey-text text-lighten-4">Nimbus<i class="material-icons right">more_vert</i></span>
+                </div>
+              </div>
+              <!-- card reveal -->
+              <div class="card-reveal light-blue lighten-4">
+                <span class="card-title black-text"><i class="material-icons right">close</i></span>
+                <p class="black-text">Nimbus is a geolocation based social media app that allows users to tag where they've been and see what their friends are up to. The iOS mobile client is built with React Native, Redux, and Exponent.js. The backend is powered by Node.js, Express, and Neo4j (a graph database).</p>
+                <a href="https://grahamperich.github.io/Nimbus/" target="_blank" class="waves-effect waves-teal btn light-green accent-3 black-text">Visit Site</a>
+              </div>
+            </div>             
+          </div>
+
+          <div id="colorz-card" class="col s12">
+            <!-- colorzio card -->
+            <div class="card light-blue lighten-2 medium">
+              <!-- card image -->
+              <div class="card-image">
+                <img class="activator" src="assets/colorz.png">
+              </div>
+              <!-- card bottom -->
+              <div class="card-content light-blue lighten-2">
+                <div id="colorz">
+                  <span class="card-title activator grey-text text-lighten-4">Colorz.io<i class="material-icons right">more_vert</i></span>
+                </div>
+              </div>
+              <!-- card reveal -->
+              <div class="card-reveal light-blue lighten-4">
+                <span class="card-title black-text"><i class="material-icons right">close</i></span>
+                <p class="black-text">Colorz.io is an intuitive color picking application built with React, Node, and MongoDB. Users can browse color palettes and easily copy hex code values to the clipboard. Users can also create their own color palettes and get suggestions about which colors go well together.</p>
+                <a href="http://107.170.231.159:3000/" target="_blank" class="waves-effect waves-teal btn light-green accent-3 black-text">Visit Site</a>
+              </div>
+            </div>          
+          </div>
+
+          <div id="sdsuevents-card" class="col s12">
+          <!-- SDSUEvents Card -->
+            <div class="card light-blue lighten-2 medium">
+              <!-- card image -->
+              <div class="card-image">
+                <img class="activator" src="assets/sdsuevents.png">
+              </div>
+              <!-- card bottom -->
+              <div class="card-content light-blue lighten-2">
+                <div id="colorz">
+                  <span class="card-title activator grey-text text-lighten-4">SDSUEvents<i class="material-icons right">more_vert</i></span>
+                </div>
+              </div>
+              <!-- card reveal -->
+              <div class="card-reveal light-blue lighten-4">
+                <span class="card-title black-text"><i class="material-icons right">close</i></span>
+                <p class="black-text">SDSUEvents is an event discovery application that I made for students at my university. It is built with Ruby on Rails, Bootstrap, and PostgreSQL. Please allow up to 30 seconds for the site to load. It is throttled by Heroku's "free" plan, and loads slowly if no one has visited the site for a while.</p>
+                <a href="http://www.sdsuevents.com/" target="_blank" class="waves-effect waves-teal btn light-green accent-3 black-text">Visit Site</a>             
+              </div>
+            </div>             
+          </div>
+
+        </div>          
         </div>
       </div>
 
@@ -96,24 +140,6 @@
             </a>
           </div>
         </div> <!-- .row -->
-
-        <!-- <div class="row">
-          <div class="col s4">
-            <a id="projects" class="waves-effect waves-light btn scale-transition scale-out">
-              Nimbus
-            </a>
-          </div>
-          <div class="col s4">
-            <a id="projects" class="waves-effect waves-light btn scale-transition scale-out">
-              Colorz.io
-            </a>
-          </div>
-          <div class="col s4">
-            <a id="projects" class="waves-effect waves-light btn scale-transition scale-out">
-              SDSUEvents
-            </a>
-          </div>
-        </div> --> <!-- .row -->
 
       </div> <!-- #buttons -->
 
