@@ -1,6 +1,6 @@
 //setup click handlers, initiate app on load...
 $(function() {
-  // $('#projects').click(handleProjectClick)
+  $('.btn').click(handleClick)
   // $('#about').click(handleAboutClick)
   // $('#contact').click(handleContactClick)
 
@@ -16,7 +16,6 @@ $(function() {
 // mock "DOM CLI" methods
 
 function setTextAndInit(str) {
-  console.log('starting main app sequence');
   $('#line-one').text(str);
   $('#command-line').append(`<span id="line-two"></span>`);
 
@@ -29,7 +28,6 @@ function setTextAndInit(str) {
 }
 
 function clearText(id, callback, args) {
-  console.log('clearing text');
   $(`${id}`).text('');
 
   if (callback) {
@@ -50,8 +48,39 @@ function ls(items) {
 
 }
 
+function renderLine4And5(id, strings) {
+  console.log(id)
+  $('#command-line').append('<br>');
+  $('#command-line').append('grahamperich@TheCloud ~  <span id="line-four"></span>');
+  $('#command-line').append('<br>');
+  $('#command-line').append('<span id="line-five"></span>');
+
+  strings.forEach(string => {
+    $('#line-five').append(`<span class="cli-file">${string}</span>`);
+  })
+  
+
+  $('#line-four').typed({
+    strings: [""],
+    typeSpeed: 5,
+    showCursor: true
+  });
+
+}
+
 // click handlers
 
-function handleProjectClick(){
+function handleClick() {
+  if (this.called) {
+    return;
+  }
 
+  this.called = true
+  var id = this.id
+  $('#line-two').typed({
+    strings: ["^500 open ./Projects ^1500"],
+    typeSpeed: 20,
+    showCursor: false,
+    callback: clearText.bind(this, '#line-two', renderLine4And5.bind(this, id, ['Nimbus', 'Colorz.io', 'SDSUEvents']))
+  });
 }

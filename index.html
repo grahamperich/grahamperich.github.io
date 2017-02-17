@@ -1,21 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <!--Import Google Ubuntu Font-->
-  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <!--Import font awesome icons -->
+  <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"/>
   <!--Import Google Icon Font-->
   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import Google Ubuntu Font-->
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"/>
   <!--Import materialize.css-->
   <link type="text/css" rel="stylesheet" href="./bower_components/materialize/dist/css/materialize.min.css"  media="screen,projection"/>
-  <link rel="stylesheet" type="text/css" href="./style.css">
+  
+  <link rel="stylesheet" type="text/css" href="./style.css"/>
   <title>Graham Perich</title>
 </head>
 <body>
+   <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo center">GRAHAM PERICH</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li>
+          <a href="https://github.com/grahamperich" target="_blank">
+          <i class="fa fa-github fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li> 
+          <a href="https://www.linkedin.com/in/grahamperich" target="_blank">
+          <i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
   <div class="container">
-    <header>
-    <h3>Graham Perich<h3>
-    <i class="fa fa-github" aria-hidden="true"></i>
-    </header>
+    <div id="header">
+
+    </div>
     <div class="container">
 
       <div id="command-line">
@@ -24,6 +43,7 @@
       </div>
 
       <div id="buttons" class="container">
+
         <div class="row">
           <div class="col s4">
             <a id="projects" class="waves-effect waves-light btn scale-transition scale-out">
@@ -41,10 +61,44 @@
             </a>
           </div>
         </div> <!-- .row -->
-      </div> <!-- .container -->
 
+        <div class="row">
+          <div class="col s4">
+            <a id="projects" class="waves-effect waves-light btn scale-transition scale-out">
+              Nimbus
+            </a>
+          </div>
+          <div class="col s4">
+            <a id="projects" class="waves-effect waves-light btn scale-transition scale-out">
+              Colorz.io
+            </a>
+          </div>
+          <div class="col s4">
+            <a id="projects" class="waves-effect waves-light btn scale-transition scale-out">
+              SDSUEvents
+            </a>
+          </div>
+        </div> <!-- .row -->
+
+      </div> <!-- .container -->
     </div> <!-- .container -->
+
+    <div class="card">
+      <div class="card-image waves-effect waves-block waves-light">
+        <img class="activator" src="images/office.jpg">
+      </div>
+      <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+        <p><a href="#">This is a link</a></p>
+      </div>
+      <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+      </div>
+    </div>
+
   </div>
+
 
   <script src="./bower_components/jquery/dist/jquery.min.js"></script>
   <script type="text/javascript" src="./bower_components/materialize/dist/js/materialize.min.js"></script>

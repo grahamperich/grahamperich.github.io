@@ -8,15 +8,30 @@ h3 {
   font-size: 50px;
 }
 
-header {
+a {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+.fa {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.row {
+  text-align: center;
+}
+
+#header {
   text-align: center;
   margin: 20px;
-  margin-bottom: 50px;
+  margin-bottom: 35px;
 }
 
 .cli-file {
   padding-right: 25px;
 }
+
 #buttons {
   margin-top: 30px;
 }
@@ -25,7 +40,7 @@ header {
   margin: 0 auto;
   padding: 20px;
   width: 90%;
-  height: 310px;
+  height: 250px;
   font-size: 20px;
   color: #00FF00;
   background-color: rgba(0,0,0, .92); 
