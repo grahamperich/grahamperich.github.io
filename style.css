@@ -16,9 +16,18 @@ a {
   color: inherit;
 }
 
-p {
-  font-size: 20px;
+@media only screen and (max-width: 767px) {
+  p {
+    font-size: 13px;
+  }
 }
+
+@media only screen and (min-width: 768px) {
+  p {
+    font-size: 17px;
+  }
+}
+
 
 .fa {
   margin-right: 10px;
@@ -39,6 +48,10 @@ p {
   margin: 0 auto;
 }
 
+#about-card {
+  display: none;
+}
+
 #cards {
   display: none;
 }
@@ -48,10 +61,10 @@ p {
   border-radius: 150px;
   height: 250px;
   margin: 0 auto;
+  margin-bottom: 20px;
 }
 
 #buttons {
-  margin-top: 30px;
   text-align: center;
 }
 
@@ -64,14 +77,16 @@ p {
   font-size: 20px;
   color: #76ff03;
   background-color: rgba(0,0,0, .92); 
-  box-shadow: 10px 10px 5px rgba(0,0,0, .52);
+  box-shadow: 10px 10px 5px rgba(0,0,0, .32);
 }
 #tabs {
   margin-bottom: -8px;
 }
+
 .tabs .indicator {
+    /*Color of underline for tabs*/
     background-color: #76ff03;
-} /*Color of underline*/
+} 
 
 .typed-cursor{
   opacity: 1;

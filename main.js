@@ -5,8 +5,7 @@ $(function() {
   $('#about').click(handleAboutClick)
 
   $('#line-one').typed({
-    // strings: ["Booting up... ^1000", "SUCCESS ^1000"],
-    strings: ["a"],
+    strings: ["Booting up... ^1000", "SUCCESS ^1000"],
     typeSpeed: 5,
     showCursor: false,
     callback: setTextAndInit.bind(this, 'grahamperich@TheCloud ~')
@@ -23,7 +22,7 @@ function setTextAndInit(str) {
     strings: ["^1000 ls ^1500"],
     typeSpeed: 5,
     showCursor: true,
-    callback: clearText.bind(this, '#line-two', ls.bind(this, ['Projects.js', 'About.js', 'Contact.js']))
+    callback: clearText.bind(this, '#line-two', ls.bind(this, ['Projects', 'About.js', 'Contact.js']))
   });
 }
 
@@ -40,7 +39,7 @@ function ls(items) {
   $('#command-line').append('<br>');
   $('#command-line').append(`<span id="line-three"></span>`);
 
-  $('.btn').toggleClass('scale-out');
+  $('.mainButtons').toggleClass('scale-out');
 
   items.forEach(item => {
     $('#line-three').append(`<span class="cli-file">${item}</span>`);
@@ -51,7 +50,7 @@ function ls(items) {
 function renderLine4And5(id, strings) {
   console.log(id)
   $('#command-line').append('<br>');
-  $('#command-line').append('grahamperich@TheCloud ~  <span id="line-four"></span>');
+  $('#command-line').append('grahamperich@TheCloud ~/Projects <span id="line-four"></span>');
   $('#command-line').append('<br>');
   $('#command-line').append('<span id="line-five"></span>');
 
@@ -66,21 +65,27 @@ function renderLine4And5(id, strings) {
     showCursor: true
   });
 
-  $('#photo').hide({duration: 800, queue: true});
-  $('#cards').show({duration: 800, queue: true});
+  showProjectCard()
 }
 
 // click handlers
 
 function handleProjectsClick() {
   if (this.called) {
+    $('#line-four').typed({
+      strings: ["^500 open . ^1350"],
+      typeSpeed: 20,
+      showCursor: false,
+      callback: clearText.bind(this, '#line-four', showProjectCard)
+    });
+    
     return;
   }
 
   this.called = true
   var id = this.id
   $('#line-two').typed({
-    strings: ["^500 node ~/Projects.js ^1350"],
+    strings: ["^500 cd Projects ^1350"],
     typeSpeed: 20,
     showCursor: false,
     callback: clearText.bind(this, '#line-two', renderLine4And5.bind(this, id, ['Nimbus', 'Colorz.io', 'SDSUEvents']))
@@ -92,16 +97,29 @@ function handleAboutClick() {
   if ($('#line-four').toArray().length) {
     $('#line-four').typed({
       strings: ['node ~/About.js ^1350'],
-      typeSpeed: 5,
+      typeSpeed: 20,
       showCursor: true,
-      callback: clearText.bind(this, '#line-four')
+      callback: clearText.bind(this, '#line-four', showAboutCard)
     });
   } else {
       $('#line-two').typed({
         strings: ['node ~/About.js ^1350'],
-        typeSpeed: 5,
+        typeSpeed: 20,
         showCursor: true,
-        callback: clearText.bind(this, '#line-two')
+        callback: clearText.bind(this, '#line-two', showAboutCard)
     });
   }
+
+}
+
+function showProjectCard() {
+  $('#photo').hide({duration: 800});
+  $('#about-card').hide({duration: 800});
+  $('#cards').show({duration: 800});
+}
+
+function showAboutCard() {
+  $('#cards').hide({duration: 800});
+  $('#photo').hide({duration: 800});
+  $('#about-card').show({duration: 800});
 }
