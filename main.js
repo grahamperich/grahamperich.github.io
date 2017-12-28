@@ -3,17 +3,21 @@ $(function() {
   $('ul.tabs').tabs();
   $('#projects').click(handleProjectsClick)
   $('#about').click(handleAboutClick)
-
+  setTimeout(() => {
+    $('canvas').fadeOut(800);
+    $('#photo').css('visibility', 'visible');
+    $('#photo').fadeIn(800);
+    clearInterval(intervalId)
+  }, 2000);
   $('#line-one').typed({
-    strings: ["Booting up... ^1000", "SUCCESS ^1000"],
+    strings: ["Booting up... ^3000", "SUCCESS ^1000"],
     typeSpeed: 5,
     showCursor: false,
-    callback: setTextAndInit.bind(this, 'grahamperich@TheCloud ~')
+    callback: setTextAndInit.bind(this, 'grahamperich@TheEther ~')
   });
 });
 
 // mock "DOM CLI" methods
-
 function setTextAndInit(str) {
   $('#line-one').text(str);
   $('#command-line').append(`<span id="line-two"></span>`);
@@ -50,7 +54,7 @@ function ls(items) {
 function renderLine4And5(id, strings) {
   console.log(id)
   $('#command-line').append('<br>');
-  $('#command-line').append('grahamperich@TheCloud ~/Projects <span id="line-four"></span>');
+  $('#command-line').append('grahamperich@TheEther ~/Projects <span id="line-four"></span>');
   $('#command-line').append('<br>');
   $('#command-line').append('<span id="line-five"></span>');
 
@@ -123,3 +127,4 @@ function showAboutCard() {
   $('#photo').hide({duration: 800});
   $('#about-card').show({duration: 800});
 }
+
