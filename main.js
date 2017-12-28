@@ -10,7 +10,7 @@ $(function() {
     clearInterval(intervalId)
   }, 2000);
   $('#line-one').typed({
-    strings: ["Booting up... ^3000", "SUCCESS ^1000"],
+    strings: ["Booting up... ^1500", "SUCCESS ^1000"],
     typeSpeed: 5,
     showCursor: false,
     callback: setTextAndInit.bind(this, 'grahamperich@TheEther ~')

@@ -143,10 +143,10 @@ function windowResized() {
 }
 
 function centerCanvas() {
-  var x = ((windowWidth - width) / 2) * 0.88;
-  var y = ((windowHeight - height) / 2) * 0.15;
   glitcher.canvas.width = 360;
   glitcher.canvas.height = 330;
+  var x = ((windowWidth - 360) / 2)
+  var y = ((windowHeight - 330) / 2) * 0.15;
   glitcher.canvas.setAttribute('style', `position: absolute;  left: ${x}px; top: ${y}px;`)
 }
 
