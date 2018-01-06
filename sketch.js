@@ -112,6 +112,7 @@ function setup() {
   glitcher.glitch('./assets/minime.png', function () {
     document.body.appendChild(glitcher.canvas);
     centerCanvas(glitcher.canvas)
+    window.initApp();
   });
   
   function randomRange(min, max) {
@@ -149,8 +150,3 @@ function centerCanvas() {
   var y = ((windowHeight - 330) / 2) * 0.15;
   glitcher.canvas.setAttribute('style', `position: absolute;  left: ${x}px; top: ${y}px;`)
 }
-
-
-
-
-

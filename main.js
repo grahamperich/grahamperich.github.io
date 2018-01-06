@@ -1,5 +1,5 @@
 //setup click handlers, initiate app on load...
-$(function() {
+window.initApp = function() {
   $('ul.tabs').tabs();
   $('#projects').click(handleProjectsClick)
   $('#about').click(handleAboutClick)
@@ -15,7 +15,7 @@ $(function() {
     showCursor: false,
     callback: setTextAndInit.bind(this, 'grahamperich@TheEther ~')
   });
-});
+}
 
 // mock "DOM CLI" methods
 function setTextAndInit(str) {
